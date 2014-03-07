@@ -30,7 +30,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway";
     font-weight: 300;
-    color: #333;
+    color: #ffffff;
 }
 
 
@@ -131,6 +131,8 @@ a:after {
 	width: 100%;
 	padding-top: 250px;
 	padding-bottom: 250px;
+	background-image: url(../img/dark-metal-grid-5.jpg);
+
 }
 
 #hello h1 {
@@ -204,7 +206,7 @@ a:after {
 /* Footer */
 #f {
 	padding-top: 20px;
-	background-color: #74cfae;
+	background-color: #2c3e50;
 }
 
 #f p {
