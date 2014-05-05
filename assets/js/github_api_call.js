@@ -16,7 +16,10 @@
 			if (this.name != (username.toLowerCase()+'.github.com')) {
             
 				list.append('<li><a href="'+ (this.homepage?this.homepage:this.html_url) +'">' + this.name + '</a>'+(this.language?('('+this.language+')'):'')+''+(this.description?(': ' + this.description +''):'')+'');
-				list.append('<div class=\"git_info\">Watchers: '+this.watchers+' - Forks: '+this.forks+' </div></li>');
+list.append('<iframe src=\'http://ghbtns.com/github-btn.html?user='+username+'&repo='+this.name+'&type=fork&count=true&size=small\' allowtransparency=\"true\" frameborder=\"0\" height=\"30px\" scrolling=\"0\" width=\"80px\"></iframe>');
+list.append('<iframe src=\'http://ghbtns.com/github-btn.html?user='+username+'&repo='+this.name+'&type=watch&count=true&size=small\' allowtransparency=\"true\" frameborder=\"0\" height=\"30px\" scrolling=\"0\" width=\"80px\"></iframe>');
+
+				//list.append('<div class=\"git_info\"><img source=\"\">: '+this.watchers+' - Forks: '+this.forks+' </div></li>');
 				list.append('</ul>');
 		  }
         });		
