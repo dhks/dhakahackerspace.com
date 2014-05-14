@@ -14,6 +14,9 @@
       <link href="assets/css/font-awesome.min.css" rel="stylesheet">
       <script src="assets/js/jquery-1.10.2.min.js"></script>
       <script src="assets/js/chart.js"></script>
+
+<script src="assets/js/github_api_call.js"></script>
+
       <link rel="icon" type="image/png" href="assets/img/fav.jpg">
       <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
@@ -35,7 +38,10 @@
             </div>
             <div class="navbar-collapse collapse">
                <ul class="nav navbar-nav navbar-right">
-                  <li class="active"><a href="#contact">Contact</a></li>
+		  <li class="active"><a href="#home">Home</a></li>
+                  <li class="active"><a href="#about">About us</a></li>
+		  <li class="active"><a href="#works">Works</a></li>
+		  <li class="active"><a href="#contact">Contact</a></li>
                </ul>
             </div>
             <!--/.nav-collapse -->
@@ -59,11 +65,11 @@
          <div class="container">
             <div class="row">
                <div class="col-lg-5 centered">
-                  <img src="assets/img/iphone.png" alt="">
+                  <img class="col-lg-12 centered" src="assets/img/logo.jpg" alt="">
                </div>
                <div class="col-lg-7 centered">
                   <h3>Who We Are ?</h3>
-                  <p>We code and love opensource !</p>
+                  <p>We are a group of opensource developers, who are extrimely motivated and always keen to hack everything around that is ethically hackable!</p>
                </div>
             </div>
          </div>
@@ -76,6 +82,16 @@
                <a href="https://github.com/dhks/dhakahackerspace.com.git
                   " target="_blank"><img src="assets/img/01.jpg" alt=""></a>
             </div>
+            <div class="col-lg-4">
+               We believe in opening up source code. Check out our github repositories below:
+		<div id="opensource-projects"></div>
+		<script>
+  $(function() {
+    $("#opensource-projects").loadRepositories("dhks");
+  });
+		</script>
+            </div>
+
          </div>
       </div>
       <div id="skills">
@@ -83,7 +99,7 @@
             <div class="row centered">
                <h3>Our Affiliations</h3>
                <div class="col-lg-3 mt">
-                  <p><a href="https://www.facebook.com/codecrunch" target="_blank">Code.Crunch</a></p>
+                  <p><a href="https://www.facebook.com/codecrunch" target="_blank"><img src="assets/img/code.crunch_logo.png">Code.Crunch</a></p>
                   <br>
                </div>
                <div class="col-lg-3 mt">
