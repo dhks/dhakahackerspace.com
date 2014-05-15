@@ -51,8 +51,52 @@
          <div class="container">
             <div class="row">
                <div class="col-lg-8 col-lg-offset-2 centered">
-                  <h1>DHKS</h1>
-                  <h2>Dhaka Hacker Space</h2>
+                  <h1 id="editable" contentEditable="true">DHKS</h1>
+                  <h2><canvas id="myCanvas" width="578" height="400"></canvas></h2>
+<script>
+$("#editable").focus();
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var imageObj = new Image();
+
+      imageObj.onload = function() {
+        context.drawImage(imageObj, 69, 50);
+      };
+      imageObj.src = 'assets/img/logo.jpg';
+canvas.addEventListener("mousedown", doMouseDown, false);
+function doMouseDown(event){
+x=event.pageX;
+y=event.pageY;
+//82       84
+//484 516 551 576 D 
+//85       85
+//566 517 635 573 H
+//651     720     A
+//736     805     K
+
+
+if(y>516 && y<576){
+	q=parseInt((x-484)/82, 10);
+	if(q==0){press("D");}
+	else if(q==1){press("H");}
+	else if(q==2){press("A");}
+	else if(q==3){press("K");}
+	else if(q==4){press("A");}
+}else if(y>597 && y<660){
+	q=parseInt((x-439)/82, 10);
+	if(q==0){press("H");}
+	if(q==1){press("A");}
+	if(q==2){press("C");}
+	if(q==3){press("K");}
+	if(q==4){press("E");}
+	if(q==5){press("R");}
+}
+alert(event.pageX+" "+event.pageY+" "+q);
+}
+function press(p){
+	$("#editable").html($("#editable").html()+p);
+}
+    </script>
                </div>
                <!-- /col-lg-8 -->
             </div>
@@ -99,11 +143,11 @@
             <div class="row centered">
                <h3>Our Affiliations</h3>
                <div class="col-lg-3 mt">
-                  <p><a href="https://www.facebook.com/codecrunch" target="_blank"><img src="assets/img/code.crunch_logo.png">Code.Crunch</a></p>
+                  <p><a href="https://www.facebook.com/codecrunch" target="_blank"><img class="thumbnail" src="assets/img/code.crunch_logo.png">Code.Crunch</a></p>
                   <br>
                </div>
                <div class="col-lg-3 mt">
-                  <p><a href="http://rupantor.com/" target="_blank">Rupantor</a></p>
+                  <p><a href="http://rupantor.com/" target="_blank"><img class="thumbnail" src="assets/img/rupantor_logo.png"> Rupantor </a></p>
                   <br>
                </div>
                <!-- 
